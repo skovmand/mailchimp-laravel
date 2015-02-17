@@ -11,7 +11,7 @@ You recieve the Mailchimp client through depencency injection already set up wit
 **Usage example**
 
 ```
-class newsletterManager {
+class NewsletterManager {
 	protected $mailchimp;
 	protected $listId = '1234567890'
 	
