@@ -2,7 +2,7 @@
   "name": "skovmand/mailchimp-laravel",
   "description": "A minimal service provider to set up and use the Mailchimp PHP library in Laravel 5",
   "require": {
-    "laravel/laravel": "5.0.*",
+    "laravel/framework": "5.0.*",
     "mailchimp/mailchimp": "~2.0"
   }
 }
