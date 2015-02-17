@@ -26,12 +26,18 @@ class newsletterManager {
 	 * Access the mailchimp lists API
 	 */
 	public function addEmailToList($email) {
-		$this->mailchimp
-			->lists
-			->subscribe(
-				$this->listId, 
-				$email
-			);
+		try {
+			$this->mailchimp
+				->lists
+				->subscribe(
+					$this->listId, 
+					$email
+				);
+        } catch (\Mailchimp_List_AlreadySubscribed $e) {
+        	// do something
+        } catch (\Mailchimp_Error $e) {
+        	// do something
+        }
 	}
 }
 
