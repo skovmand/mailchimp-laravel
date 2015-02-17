@@ -4,5 +4,10 @@
   "require": {
     "laravel/framework": "5.0.*",
     "mailchimp/mailchimp": "~2.0"
-  }
+  },
+  "autoload": {
+    "psr-4": {
+      "Skovmand\\Mailchimp\\": "src/"
+    }
+  },
 }
