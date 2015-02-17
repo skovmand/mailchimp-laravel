@@ -11,7 +11,7 @@ You recieve the Mailchimp client through depencency injection already set up wit
 **Usage example**
 
 ```
-class NewsletterManager {
+class newsletterManager {
 	protected $mailchimp;
 	protected $listId = '1234567890'
 	
@@ -45,7 +45,7 @@ class NewsletterManager {
 
 However, you can also instantiate the Mailchimp client using 
 
-```$mailchimp =App::make('Mailchimp')```
+```$mailchimp = App::make('Mailchimp');```
 
 
  
