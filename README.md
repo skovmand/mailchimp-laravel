@@ -11,21 +11,24 @@ You recieve the Mailchimp client through depencency injection already set up wit
 **Usage example**
 
 ```
-class newsletterManager {
+class NewsletterManager 
+{
 	protected $mailchimp;
-	protected $listId = '1234567890'
+	protected $listId = '1234567890'        // Id of newsletter list
 	
 	/**
 	 * Pull the Mailchimp-instance (including API-key) from the IoC-container.
 	 */
-	public function __construct(Mailchimp $mailchimp) {
+	public function __construct(Mailchimp $mailchimp) 
+	{
 		$this->mailchimp = $mailchimp;
 	}
 
 	/**
 	 * Access the mailchimp lists API
 	 */
-	public function addEmailToList($email) {
+	public function addEmailToList($email) 
+	{
 		try {
 			$this->mailchimp
 				->lists
