@@ -91,3 +91,5 @@ This will publish ```config/mailchimp.php``` to your config folder. In this file
 ```
 'apikey' => 'your-api-key-here',
 ```
+
+**Good to go! I hope you find it useful** 
