@@ -46,10 +46,9 @@ class NewsletterManager
 
 ```
 
-However, you can also instantiate the Mailchimp client using 
+You can also instantiate the Mailchimp client using: 
 
 ```$mailchimp = App::make('Mailchimp');```
-
 
  
 ## Setup
