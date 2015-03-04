@@ -66,7 +66,7 @@ Note: Adding this dependency will automatically setup "mailchimp/mailchimp": "~2
 ```
 
 
-**Step 2: Register the service provider***
+**Step 2: Register the service provider**
 
 Register the service provider in ```config/app.php``` by inserting into the ```providers``` array
 
@@ -91,4 +91,4 @@ This will publish ```config/mailchimp.php``` to your config folder. In this file
 'apikey' => 'your-api-key-here',
 ```
 
-**Good to go! I hope you find it useful** 
+**Good to go!** 
