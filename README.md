@@ -66,19 +66,8 @@ Note: Adding this dependency will automatically setup "mailchimp/mailchimp": "~2
 }
 ```
 
-**Step 2: From the command-line run**
- 
-```
-php artisan vendor:publish --provider="Skovmand\Mailchimp\MailchimpServiceProvider"
-```
 
-This will publish ```config/mailchimp.php``` to your config folder. In this file, insert your Mailchimp API key:
-
-```
-'apikey' => 'your-api-key-here',
-```
-
-**Step 3: Register the service provider***
+**Step 2: Register the service provider***
 
 Register the service provider in ```config/app.php``` by inserting into the ```providers``` array
 
@@ -90,3 +79,15 @@ Register the service provider in ```config/app.php``` by inserting into the ```p
 ]
 ```
 
+
+**Step 3: From the command-line run**
+ 
+```
+php artisan vendor:publish --provider="Skovmand\Mailchimp\MailchimpServiceProvider"
+```
+
+This will publish ```config/mailchimp.php``` to your config folder. In this file, insert your Mailchimp API key:
+
+```
+'apikey' => 'your-api-key-here',
+```
