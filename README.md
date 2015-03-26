@@ -34,7 +34,7 @@ class NewsletterManager
 				->lists
 				->subscribe(
 					$this->listId, 
-					$email
+					['email' => $email]
 				);
         } catch (\Mailchimp_List_AlreadySubscribed $e) {
         	// do something
