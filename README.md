@@ -14,7 +14,7 @@ You recieve the Mailchimp client through depencency injection already set up wit
 class NewsletterManager 
 {
 	protected $mailchimp;
-	protected $listId = '1234567890'        // Id of newsletter list
+	protected $listId = '1234567890';        // Id of newsletter list
 	
 	/**
 	 * Pull the Mailchimp-instance (including API-key) from the IoC-container.
