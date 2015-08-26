@@ -46,9 +46,9 @@ class NewsletterManager
 
 ```
 
-You can also instantiate the Mailchimp client using: 
+You can also instantiate the Mailchimp client in Laravel 5 by using: 
 
-```$mailchimp = App::make('Mailchimp');```
+```$mailchimp = app('Mailchimp');```
 
  
 ## Setup
