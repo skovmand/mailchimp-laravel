@@ -10,7 +10,7 @@ You recieve the Mailchimp client through depencency injection already set up wit
 
 **Usage example**
 
-```
+```php
 class NewsletterManager 
 {
 	protected $mailchimp;
@@ -57,7 +57,7 @@ You can also instantiate the Mailchimp client in Laravel 5 by using:
 Add this to your composer.json in your Laravel folder.
 Note: Adding this dependency will automatically setup "mailchimp/mailchimp": "~2.0" too.
 
-```
+```json
 "require": {
     ...
     "skovmand/mailchimp-laravel": "1.*",
@@ -70,10 +70,10 @@ Note: Adding this dependency will automatically setup "mailchimp/mailchimp": "~2
 
 Register the service provider in ```config/app.php``` by inserting into the ```providers``` array
 
-```
+```php
 'providers' => [
 	...
-	'Skovmand\Mailchimp\MailchimpServiceProvider',
+	Skovmand\Mailchimp\MailchimpServiceProvider::class,
 	...
 ]
 ```
@@ -87,7 +87,7 @@ php artisan vendor:publish --provider="Skovmand\Mailchimp\MailchimpServiceProvid
 
 This will publish ```config/mailchimp.php``` to your config folder. In this file, insert your Mailchimp API key:
 
-```
+```php
 'apikey' => 'your-api-key-here',
 ```
 
