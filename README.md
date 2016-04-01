@@ -89,7 +89,7 @@ This will publish ```config/mailchimp.php``` to your config folder.
 for more info check "http://kb.mailchimp.com/accounts/management/about-api-keys#Find-or-Generate-Your-API-Key"
 
 ```php
-'MAILCHIMP_API_KEY' => 'your-api-key-here',
+MAILCHIMP_API_KEY="your-api-key-here"
 ```
 
 **Good to go!**
