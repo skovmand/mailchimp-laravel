@@ -1,8 +1,9 @@
 # skovmand/mailchimp-laravel
-A minimal service provider to set up and use the Mailchimp APi v2 PHP library in Laravel v5.*
+A minimal service provider to set up and use the Mailchimp API v2 PHP library in Laravel v5.*
 
 For Laravel v4 check https://packagist.org/packages/hugofirth/mailchimp
 
+Please note that [Mailchimp API v2 is deprecated from jan 1st 2017](http://us12.campaign-archive2.com/?u=165abe0a1aa09263bc6ad1397&id=390ec1286a&e=). This package uses the v2 API, because it relies on the [Mailchimp PHP API Client](https://bitbucket.org/mailchimp/mailchimp-api-php.git). 
 
 ## How it works
 This package contains a service provider, which binds an instance of an initialized Mailchimp client to the IoC-container.
