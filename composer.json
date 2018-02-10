@@ -3,7 +3,7 @@
   "description": "A minimal service provider to set up and use the Mailchimp Api v2 PHP library in Laravel 5.*",
   "license": "MIT",
   "require": {
-    "laravel/framework": "5.0 - 5.5",
+    "laravel/framework": "5.0 - 5.6",
     "mailchimp/mailchimp": "~2.0"
   },
   "autoload": {
