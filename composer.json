@@ -10,5 +10,6 @@
     "psr-4": {
       "Skovmand\\Mailchimp\\": "src/"
     }
-  }
+  },
+  "abandoned": true
 }
