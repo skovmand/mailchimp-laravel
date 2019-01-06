@@ -1,15 +1,16 @@
+# This package is abandoned.
+
+The Mailchimp API v2.0 was deprecated from jan 1st 2017. This package uses the v2 API, because it relies on the [Mailchimp PHP API Client](https://bitbucket.org/mailchimp/mailchimp-api-php.git), which uses the v2 API.
+
+This package will not recieve updates for future Laravel versions. 
+
+Please use an api v3-compatible package instead, several are available on [Packagist](https://packagist.org/)
+
+
 # skovmand/mailchimp-laravel
 A minimal service provider to set up and use the Mailchimp API v2 PHP library in Laravel v5.*
 
 For Laravel v4 check https://packagist.org/packages/hugofirth/mailchimp
-
-
-## This package is abandoned.
-The Mailchimp API v2.0 was deprecated from jan 1st 2017. This package uses the v2 API, because it relies on the [Mailchimp PHP API Client](https://bitbucket.org/mailchimp/mailchimp-api-php.git), which uses the v2 API.
-
-This package will not recieve updates for future Laravel versions.
-
-Please use an api v3-compatible package instead, such as [spatie/laravel-newsletter](https://packagist.org/packages/spatie/laravel-newsletter)
 
 
 ## How it works
@@ -36,7 +37,6 @@ class NewsletterManager
 
 	/**
 	 * Access the mailchimp lists API
-     * for more info check "https://apidocs.mailchimp.com/api/2.0/lists/subscribe.php"
 	 */
 	public function addEmailToList($email)
 	{
@@ -93,8 +93,6 @@ php artisan vendor:publish --provider="Skovmand\Mailchimp\MailchimpServiceProvid
 This will publish ```config/mailchimp.php``` to your config folder.
 
 **Step 4: Edit your .env file**
-
-for more info check "http://kb.mailchimp.com/accounts/management/about-api-keys#Find-or-Generate-Your-API-Key"
 
 ```php
 MAILCHIMP_API_KEY="your-api-key-here"
