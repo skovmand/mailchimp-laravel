@@ -32,7 +32,7 @@ class NewsletterManager
 	 */
 	public function __construct(\Mailchimp $mailchimp)
 	{
-		$this->mailchimp = $mailchimp;
+			$this->mailchimp = $mailchimp;
 	}
 
 	/**
@@ -40,21 +40,19 @@ class NewsletterManager
 	 */
 	public function addEmailToList($email)
 	{
-		try {
-			$this->mailchimp
-				->lists
-				->subscribe(
-					$this->listId,
-					['email' => $email]
-				);
-        } catch (\Mailchimp_List_AlreadySubscribed $e) {
-        	// do something
-        } catch (\Mailchimp_Error $e) {
-        	// do something
-        }
+			try {
+					$this->mailchimp
+						->lists
+						->subscribe(
+							$this->listId,
+							['email' => $email]
+						);
+			} catch (\Mailchimp_List_AlreadySubscribed $e) {
+					// do something
+			} catch (\Mailchimp_Error $e) {
+					// do something
+			}
 	}
-}
-
 ```
 
 Or you can manually instantiate the Mailchimp client by using:
