@@ -24,35 +24,35 @@ You recieve the Mailchimp client through depencency injection already set up wit
 ```php
 class NewsletterManager
 {
-	protected $mailchimp;
-	protected $listId = '1234567890';        // Id of newsletter list
+  protected $mailchimp;
+  protected $listId = '1234567890';        // Id of newsletter list
 
-	/**
-	 * Pull the Mailchimp-instance from the IoC-container.
-	 */
-	public function __construct(\Mailchimp $mailchimp)
-	{
-			$this->mailchimp = $mailchimp;
-	}
+  /**
+   * Pull the Mailchimp-instance from the IoC-container.
+   */
+  public function __construct(\Mailchimp $mailchimp)
+  {
+      $this->mailchimp = $mailchimp;
+  }
 
-	/**
-	 * Access the mailchimp lists API
-	 */
-	public function addEmailToList($email)
-	{
-			try {
-					$this->mailchimp
-						->lists
-						->subscribe(
-							$this->listId,
-							['email' => $email]
-						);
-			} catch (\Mailchimp_List_AlreadySubscribed $e) {
-					// do something
-			} catch (\Mailchimp_Error $e) {
-					// do something
-			}
-	}
+  /**
+   * Access the mailchimp lists API
+   */
+  public function addEmailToList($email)
+  {
+      try {
+          $this->mailchimp
+            ->lists
+            ->subscribe(
+              $this->listId,
+              ['email' => $email]
+            );
+      } catch (\Mailchimp_List_AlreadySubscribed $e) {
+          // do something
+      } catch (\Mailchimp_Error $e) {
+          // do something
+      }
+  }
 ```
 
 Or you can manually instantiate the Mailchimp client by using:
@@ -78,7 +78,7 @@ Register the service provider in ```config/app.php``` by inserting into the ```p
 
 ```php
 'providers' => [
-	Skovmand\Mailchimp\MailchimpServiceProvider::class,
+  Skovmand\Mailchimp\MailchimpServiceProvider::class,
 ]
 ```
 
