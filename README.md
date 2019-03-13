@@ -61,7 +61,7 @@ Or you can manually instantiate the Mailchimp client by using:
 ```$mailchimp = app('Mailchimp');```
 
 
-## Setup
+## Setup Laravel v5.*
 **Step 1: Adding the dependency to composer.json**
 
 Add this to your composer.json in your Laravel folder.
@@ -91,6 +91,49 @@ php artisan vendor:publish --provider="Skovmand\Mailchimp\MailchimpServiceProvid
 
 This will publish ```config/mailchimp.php``` to your config folder.
 
+## Setup Lumen v5.*
+**Step 1: Adding the dependency to composer.json**
+
+Add this to your composer.json in your Laravel folder.
+Note: Adding this dependency will automatically setup "mailchimp/mailchimp": "~2.0" too. Aftwards, run ```composer update``` from your command line.
+
+```json
+"require": {
+    "skovmand/mailchimp-laravel": "1.*",
+}
+```
+
+**Step 2: Register the service provider**
+
+Register the service provider in ```bootstrap/app.php```
+
+```php
+$app->register(Skovmand\Mailchimp\MailchimpServiceProvider::class);
+
+# Mailchimp service must be registered before routes are included
+require __DIR__ . '/../app/Http/routes.php';
+```
+
+**Step 3: Create the Mailchimp configuration file (```config/mailchimp.php```):**
+```php
+<?php
+
+return [
+    /*
+    |--------------------------------------------------------------------------
+    | API Secret Key
+    |--------------------------------------------------------------------------
+    |
+    | The api secret key to access Mailchimp. If you don't know the API key, find it here:
+    | "http://kb.mailchimp.com/accounts/management/about-api-keys#Find-or-Generate-Your-API-Key"
+    |
+     */
+
+    'apikey' => env('MAILCHIMP_API_KEY')
+];
+```
+
+## Setup Mailchip API key (Laravel/Lumen)
 **Step 4: Edit your .env file**
 
 ```php

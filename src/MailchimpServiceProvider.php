@@ -17,9 +17,15 @@ class MailchimpServiceProvider extends ServiceProvider {
      */
     public function boot()
     {
-        $this->publishes([
-            __DIR__ . '/../config/mailchimp.php' => config_path('mailchimp.php')
-        ]);
+        $configPath = __DIR__ . '/../config/mailchimp.php';
+        $app = $this->app;
+        
+        if (class_exists('Illuminate\Foundation\Application') && $app instanceof LaravelApplication && $app->runningInConsole()) {
+            $this->publishes([$configPath => config_path('mailchimp.php')]);
+            $this->mergeConfigFrom($configPath, 'mailchimp');
+        } else if ( class_exists('Laravel\Lumen\Application', false) ) {
+            $app->configure('mailchimp');
+        }
     }
 
     /**
